@@ -12,10 +12,13 @@
     "@supabase/auth-helpers-nextjs": "^0.10.0",
     "@supabase/auth-helpers-react": "^0.5.0",
     "@supabase/supabase-js": "^2.42.7",
+    "javascript-time-ago": "^2.5.10",
     "next": "14.2.2",
     "react": "^18",
     "react-clickout-handler": "^1.2.1",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-spinners": "^0.13.8",
+    "react-time-ago": "^7.3.1"
   },
   "devDependencies": {
     "eslint": "^8",
