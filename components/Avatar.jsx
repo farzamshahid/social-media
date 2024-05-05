@@ -18,7 +18,7 @@ export default function Avatar({ size, url, editable, onChange }) {
     }
     let width = 'w-12';
     if (size === 'lg') {
-        width = 'w-24 md:w-36';
+        width = 'w-24 md:w-30';
     }
     return (
         <div className={`${width} relative`}>
