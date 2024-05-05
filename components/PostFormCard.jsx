@@ -31,14 +31,17 @@ export default function PostFormCard({ onPost }) {
 
     async function addPhotos(ev) {
         const files = ev.target.files;
+        console.log(files)
         if (files.length > 0) {
             setIsUploading(true);
             for (const file of files) {
+                console.log(file)
                 const newName = Date.now() + file.name;
-                const result = await supabase
-                    .storage
+                console.log(newName)
+                const result = await supabase.storage
                     .from('photos')
                     .upload(newName, file);
+                console.log(result)
                 if (result.data) {
                     const url = process.env.NEXT_PUBLIC_SUPABASE_URL + '/storage/v1/object/public/photos/' + result.data.path;
                     setUploads(prevUploads => [...prevUploads, url]);
@@ -48,7 +51,9 @@ export default function PostFormCard({ onPost }) {
             }
             setIsUploading(false);
         }
+        console.log(uploads)
     }
+
 
     return (
         <Card>
